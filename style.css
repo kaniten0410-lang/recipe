@@ -35,15 +35,13 @@ h3 {
 dl {
   display: grid;
   grid-template-columns: 1fr 1fr;
-}
-
-dt {
-  margin-left: 10px;
+  gap: 0 6px;
 }
 
 dt, dd {
   padding: 4px 0;
   border-bottom: 1px solid #eee;
+  word-break: keep-all;
 }
 
 ul, li {
@@ -60,12 +58,6 @@ ul, li {
   box-shadow: 0 0 10px #fae0c8;
 }
 
-@media (max-width: 600px) {
-  .category {
-    width: 95%;
-  }
-}
-
 .preparation {
   font-size: 17px;
   margin: 6px 0 6px 0; 
@@ -79,6 +71,9 @@ ul, li {
 .text-arrangement {
   padding: 3px 0 3px 0;
 }
+.text-arrangement li{
+  margin-bottom: 10px;
+}
 
 .image-insert {
   background-image:url(./tamago.png);
@@ -90,8 +85,46 @@ ul, li {
 
 .name{
   display: flex;
+  width: min(68%, 800px);
   margin:  0 auto;
   text-align: center;
   padding: 20px;
   gap: 0 30px;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 12px;
+  }
+  h1 {
+    font-size: 20px;
+    margin: 10px 10px ;
+    word-break: keep-all;
+  } 
+  h2 {
+    font-size: 21px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  ul, li {
+    font-size: 15px;
+  }
+
+  .category {
+    width: 100%;
+  }
+  .name {
+    display: block;
+    width: 100%;
+  }
+  .image-insert{
+    background-size: contain; 
+    width: 100%;
+    height: 50px;
+  }
+  .left-margin{
+    margin-left: 5px;
+  }
+
 }
